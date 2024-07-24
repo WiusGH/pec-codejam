@@ -1,9 +1,10 @@
 import React from 'react'
+import style from './Layout.module.css'
 
 const Footer = () => {
   return (
-    <div className='footer'>
-      Footer
+    <div className={style.footer}>
+      <p>CodeJam 2024</p>
     </div>
   )
 }
