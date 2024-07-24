@@ -1,7 +1,20 @@
 .header {
+  align-items: center;
   display: flex;
+  justify-content: start;
+  min-height: 100px;
+  width: 100%;
+}
+
+.logo {
+  height: 120px;
+  margin: 10px 25px;
 }
 
 .footer {
-  display: flex;
+  bottom: 0;
+  min-height: 50px;
+  position: fixed;
+  text-align: center;
+  width: 100%;
 }
