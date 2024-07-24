@@ -1,9 +1,10 @@
 import React from 'react'
+import MainContainer from '../components/containers/MainContainer'
 
 const Home = () => {
   return (
     <div>
-      <h1>Hello, world!</h1>
+      <MainContainer content="Home" />
     </div>
   )
 }
