@@ -5,6 +5,7 @@ from models.user import User
 from models.parking_spot import ParkingSpot
 from flask_cors import CORS
 from apis.user import user_bp
+from werkzeug.security import generate_password_hash
 
 
 def create_app():
@@ -17,7 +18,8 @@ def create_app():
     with new_app.app_context():
         db.create_all()
         if not User.query.filter_by(username="admin").first():
-            admin_user = User(username="admin", email="admin@localhost", password="admin", user_type="admin")
+            admin_user = User(username="admin", email="admin@localhost", password=generate_password_hash("admin"),
+                              user_type="admin")
             db.session.add(admin_user)
             db.session.commit()
 
