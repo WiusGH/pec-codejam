@@ -7,6 +7,8 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import Register from './pages/Register';
 import Error404 from './pages/Error404';
+import User from './pages/User';
+import Admin from './pages/Admin';
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/user" element={<User />} />
+          <Route path="/admin" element={<Admin />} />
           <Route path="*" element={<Error404 />} />
         </Routes>
       </Layout>
