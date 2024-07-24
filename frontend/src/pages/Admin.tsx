@@ -1,11 +1,11 @@
 import React from 'react'
 import MainContainer from '../components/containers/MainContainer'
-import AdminRegisterForm from '../components/admin_sites/AdminRegisterForm'
+import UserRegistration from '../components/admin_sites/UserResgistration'
 
 const Admin = () => {
   return (
     <div>
-      <MainContainer content={<AdminRegisterForm/>}/>
+      <MainContainer content={<UserRegistration/>}/>
     </div>
   )
 }

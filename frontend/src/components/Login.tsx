@@ -22,7 +22,6 @@ const Login = () => {
       ...formData,
       [e.target.name]: e.target.value
     })
-    console.log(formData)
   }
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -32,7 +31,8 @@ const Login = () => {
       const response = await axios.post('/login', formData);
       localStorage.setItem('username', response.data.username);
       localStorage.setItem('user_type', response.data.user_type);
-
+      console.log(response.data);
+      console.log(response.data.user_type);
       if (response.data.user_type === 'admin') {
         navigate('/admin');
       } else {
