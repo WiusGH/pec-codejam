@@ -1,0 +1,15 @@
+.input {
+  border-radius: 8px;
+  border: none;
+  width: 80%;
+  margin: 5px;
+  padding: 4px;
+}
+
+.form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+

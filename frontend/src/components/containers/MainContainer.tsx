@@ -1,5 +1,5 @@
 import React from 'react'
-import style from './MainContainer.module.css'
+import style from './MainCointainer.module.css'
 
 interface MainContainerProps {
     content: React.ReactNode;
