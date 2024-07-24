@@ -18,7 +18,17 @@ def login():
     data = request.get_json()
     user = User.query.filter_by(username=data['username']).first()
     if user and check_password_hash(user.password, data['password']):
-        return jsonify({'message': 'Login successful'})
+        print(user)
+        return jsonify(user.to_dict())
     else:
         return jsonify({'message': 'Invalid username or password'})
+
+
+@user_bp.route('/data', methods=['GET'])
+def get_data():
+    user = User.query.get(request.args.get('id'))
+    if user:
+        return jsonify(user.to_dict())
+    else:
+        return jsonify({'message': 'User not found'})
 
